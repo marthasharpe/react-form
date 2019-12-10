@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import UserName from './UserName';
+import Welcome from './Welcome';
+import UserQuest from './UserQuest';
+import UserFavorites from './UserFavorites';
+import Success from './Success';
 
 export default function Intro() {
     const [step, setStep] = useState(1);
     const [values, setValues] = useState({
-        name: '',
+        firstName: '',
+        lastName: '',
+        occupation: '',
         city: '',
+        color: '',
+        season: '',
     })
 
     //Proceed to next step
@@ -19,13 +27,19 @@ export default function Intro() {
     }
 
     //Handle field changes
-    const handleChange = (input, e) => {
+    const handleChange = input => e => {
         setValues({...values, [input]: e.target.value})
     }
     
 
     switch(step) {
         case 1:
+            return (
+                <Welcome 
+                    nextStep={nextStep}
+                />
+            )
+        case 2:
             return (
                 <UserName 
                     nextStep={nextStep}
@@ -34,17 +48,21 @@ export default function Intro() {
                     values={values}
                 />
             )
-        case 2:
-            return (
-                <h1>UserQuest</h1>
-            )
         case 3:
             return (
-                <h1>UserFavorites</h1>
+                <UserQuest />
+            )
+        case 4:
+            return (
+                <UserFavorites />
+            )
+        case 5:
+            return (
+                <Success />
             )
         default:
             return (
-                <h1>Something's Wrong</h1>
+                <h1>Oops</h1>
             )
 
     }
