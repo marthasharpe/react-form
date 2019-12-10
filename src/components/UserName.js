@@ -11,8 +11,25 @@ export default function UserName(props) {
                     hintText="Enter your first name"
                     floatingLabelText="First Name"
                     onChange={props.handleChange('firstName')}
+                    defaultValue={props.values.firstName}
                 />
-                <RaisedButton />
+                <br/>
+                <TextField 
+                    hintText="Enter your last name"
+                    floatingLabelText="Last Name"
+                    onChange={props.handleChange('lastName')}
+                    defaultValue={props.values.lastName}
+                />
+                <RaisedButton
+                    label="Go Back"
+                    priary={true}
+                    onClick={props.prevStep}
+                />
+                <RaisedButton
+                    label="Proceed"
+                    priary={true}
+                    onClick={props.nextStep}
+                />
             </MuiThemeProvider>
         </div>
     )
