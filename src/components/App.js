@@ -1,31 +1,19 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import grey from '@material-ui/core/colors/grey';
 import Intro from './Intro';
 
 const theme = createMuiTheme({
     palette: {
-      primary: {
-        main: '#636363',
-      },
-      secondary: {
-        main: '#212121',
-        contrastText: 'white',
-      },
+      primary: grey,
     },
   });
 
 export default function App() {
     return (
         <ThemeProvider theme={theme}>
-        <Grid
-            container
-            direction="column"
-            justify="center"
-            alignItems="center"
-            bgcolor="secondary.main"
-        >
             <AppBar
                 position="static"
                 color="primary"
@@ -33,8 +21,15 @@ export default function App() {
             >
                 <h1>The Form of Death!</h1>   
             </AppBar>
-            <Intro />
-        </Grid>
+            <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+                height="100%"
+            >
+                <Intro />
+            </Box>
         </ThemeProvider>
     )
 }
