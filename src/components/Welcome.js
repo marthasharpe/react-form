@@ -1,14 +1,16 @@
 import React from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 
 export default function Welcome(props) {
     return (
-        <MuiThemeProvider>
-            <RaisedButton
-                label="Proceed"
+        <React.Fragment>
+            <Button
+                variant="contained"
+                color="primary"
                 onClick={props.nextStep}
-                />
-        </MuiThemeProvider>
+            >
+                Proceed
+            </Button>
+        </React.Fragment>
     )
 }

@@ -1,36 +1,36 @@
-import React from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
-import TextField from 'material-ui/TextField'
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 export default function UserName(props) {
     return (
-        <div>
-            <MuiThemeProvider>
-                <TextField 
-                    hintText="Enter your first name"
-                    floatingLabelText="First Name"
+            <React.Fragment>
+                <TextField
+                    id="filled-basic"
+                    label="First Name"
+                    variant="filled"
                     onChange={props.handleChange('firstName')}
-                    defaultValue={props.values.firstName}
                 />
-                <br/>
-                <TextField 
-                    hintText="Enter your last name"
-                    floatingLabelText="Last Name"
+                <TextField
+                    id="filled-basic"
+                    label="Last Name"
+                    variant="filled"
                     onChange={props.handleChange('lastName')}
-                    defaultValue={props.values.lastName}
                 />
-                <RaisedButton
-                    label="Go Back"
-                    priary={true}
+                <Button
+                    variant="contained"
+                    color="primary"
                     onClick={props.prevStep}
-                />
-                <RaisedButton
-                    label="Proceed"
-                    priary={true}
+                >
+                    Go Back
+                </Button>
+                <Button
+                    variant="contained"
+                    color="primary"
                     onClick={props.nextStep}
-                />
-            </MuiThemeProvider>
-        </div>
+                >
+                    Proceed
+                </Button>
+            </React.Fragment>
     )
 }

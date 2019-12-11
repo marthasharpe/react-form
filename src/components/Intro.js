@@ -4,6 +4,7 @@ import Welcome from './Welcome';
 import UserQuest from './UserQuest';
 import UserFavorites from './UserFavorites';
 import Success from './Success';
+import Processing from './Processing';
 
 export default function Intro() {
     const [step, setStep] = useState(1);
@@ -58,12 +59,15 @@ export default function Intro() {
             )
         case 5:
             return (
+                <Processing />
+            )
+        case 6:
+            return (
                 <Success />
             )
         default:
             return (
                 <h1>Oops</h1>
             )
-
     }
 }
