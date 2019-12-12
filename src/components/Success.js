@@ -4,10 +4,21 @@ import React from 'react'
 //if not, render failure
 
 export default function Success(props) {
-    return (
-        <div>
-            <h1>Success!</h1>
-            <p>Well done {props.values.firstName} {props.values.lastName}, {props.values.occupation} of {props.values.city}. You may pass.</p>
-        </div>
-    )
+
+    const state = props.values;
+
+    if (Object.values(state).includes('')) {
+        return (
+            <div>
+                <h1>Failure!</h1>
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <h1>Success!</h1>
+                <p>Well done {state.firstName} {state.lastName}, {state.occupation} of {state.city}. You may pass.</p>
+            </div>
+        )
+    }
 }
