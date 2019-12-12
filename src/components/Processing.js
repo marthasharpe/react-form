@@ -4,7 +4,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 export default function Processing(props) {
 
     //simulates info being processed, then goes to next step
-    setTimeout(() => {props.nextStep()}, 3000)
+    setTimeout(() => {props.nextStep()}, 2500)
 
     return (
         <div>

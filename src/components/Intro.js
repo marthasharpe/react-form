@@ -8,13 +8,14 @@ import Processing from './Processing';
 
 export default function Intro() {
     const [step, setStep] = useState(1);
-    const [values, setValues] = useState({
+    const initialState = {
         firstName: '',
         lastName: '',
         occupation: '',
         city: '',
         color: '',
-    })
+    }
+    const [values, setValues] = useState(initialState);
 
     //Proceed to next step
     const nextStep = () => {
@@ -24,6 +25,12 @@ export default function Intro() {
     //Return to previous step
     const prevStep = () => {
         setStep(step - 1);
+    }
+
+    //Return to beginning
+    const reset = () => {
+        setStep(1);
+        setValues(initialState);
     }
 
     //Handle field changes
@@ -76,6 +83,7 @@ export default function Intro() {
             return (
                 <Success
                     values={values}
+                    reset={reset}
                 />
             )
         default:
