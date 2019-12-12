@@ -11,11 +11,9 @@ export default function Intro() {
     const [values, setValues] = useState({
         firstName: '',
         lastName: '',
-        birthDate: '',
         occupation: '',
         city: '',
         color: '',
-        season: '',
     })
 
     //Proceed to next step
@@ -52,11 +50,21 @@ export default function Intro() {
             )
         case 3:
             return (
-                <UserQuest />
+                <UserQuest 
+                    nextStep={nextStep}
+                    prevStep={prevStep}
+                    handleChange={handleChange}
+                    values={values}
+                />
             )
         case 4:
             return (
-                <UserFavorites />
+                <UserFavorites
+                    nextStep={nextStep}
+                    prevStep={prevStep}
+                    handleChange={handleChange}
+                    values={values}
+                />
             )
         case 5:
             return (
