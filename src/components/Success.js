@@ -27,7 +27,7 @@ export default function Success(props) {
                     src={gorge}
                     className={classes.bigAvatar}
                 />
-                <p>You did not answer all my questions! You are cast into the Gorge of Eternal Peril!</p>
+                <p>You did not answer all of my questions!<br/>You are cast into the Gorge of Eternal Peril!</p>
                 <Button
                     variant="contained"
                     color="primary"
@@ -46,7 +46,7 @@ export default function Success(props) {
                     src={lancelot}
                     className={classes.bigAvatar}
                 />
-                <p>Well done {state.firstName} {state.lastName}, {state.occupation} of {state.city}. You answered all my questions. Off you go.</p>
+                <p>Well done {state.firstName} {state.lastName}, {state.occupation} of {state.city}!<br/>You answered all my questions. Off you go.</p>
                 <Button
                     variant="contained"
                     color="primary"

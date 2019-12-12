@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, Container, AppBar } from '@material-ui/core';
+import { Box, Container, AppBar, Paper } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import Intro from './Intro';
+import State from './State';
 
 const theme = createMuiTheme({
     palette: {
@@ -17,11 +17,11 @@ export default function App() {
             <AppBar
                 position="static"
                 color="primary"
-                style={{textAlign: 'center'}}
             >
                 <h1>The Form of Death</h1>   
             </AppBar>
             <Container maxWidth="xs">
+                <Paper>
                 <Box
                     display="flex"
                     flexDirection="column"
@@ -29,9 +29,11 @@ export default function App() {
                     justifyContent="space-around"
                     margin="1rem"
                     borderRadius="1rem"
+                    height="500px"
                 >
-                    <Intro />
+                    <State />
                 </Box>
+                </Paper>
             </Container>
         </ThemeProvider>
     )

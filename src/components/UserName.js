@@ -1,11 +1,10 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
+import { Button, TextField, Grid } from '@material-ui/core';
 
 export default function UserName(props) {
     return (
             <React.Fragment>
-                <h2>What is your...</h2>
+                <h2 className="heading">What is your...</h2>
                 <TextField
                     id="filled-basic"
                     label="First Name"
@@ -18,20 +17,26 @@ export default function UserName(props) {
                     variant="filled"
                     onChange={props.handleChange('lastName')}
                 />
-                <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={props.prevStep}
-                >
-                    Go Back
-                </Button>
-                <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={props.nextStep}
-                >
-                    Proceed
-                </Button>
+                <Grid container justify="center" spacing={2}>
+                    <Grid item>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={props.prevStep}
+                        >
+                            Go Back
+                        </Button>
+                    </Grid>
+                    <Grid item>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={props.nextStep}
+                        >
+                            Proceed
+                        </Button>
+                    </Grid>
+                </Grid>
             </React.Fragment>
     )
 }

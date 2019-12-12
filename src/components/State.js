@@ -6,7 +6,7 @@ import UserFavorites from './UserFavorites';
 import Success from './Success';
 import Processing from './Processing';
 
-export default function Intro() {
+export default function State() {
     const [step, setStep] = useState(1);
     const initialState = {
         firstName: '',
