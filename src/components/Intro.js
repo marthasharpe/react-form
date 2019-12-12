@@ -11,6 +11,7 @@ export default function Intro() {
     const [values, setValues] = useState({
         firstName: '',
         lastName: '',
+        birthDate: '',
         occupation: '',
         city: '',
         color: '',
