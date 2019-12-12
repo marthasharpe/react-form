@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import Avatar from '@material-ui/core/Avatar';
+import { Button, Avatar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import pic from './../bridge-keeper.png';
+import gorge from './../into-the-gorge.png';
+import lancelot from './../lancelot.png';
 
 const useStyles = makeStyles({
     bigAvatar: {
@@ -21,9 +21,13 @@ export default function Success(props) {
     if (Object.values(state).includes('')) {
         return (
             <React.Fragment>
-                <Avatar alt="Bridge Keeper" src={pic} className={classes.bigAvatar}/>
                 <h1>Failure!</h1>
-                <p>You did not answer all my questions!</p>
+                <Avatar
+                    alt="Into the Gorge"
+                    src={gorge}
+                    className={classes.bigAvatar}
+                />
+                <p>You did not answer all my questions! You are cast into the Gorge of Eternal Peril!</p>
                 <Button
                     variant="contained"
                     color="primary"
@@ -36,9 +40,13 @@ export default function Success(props) {
     } else {
         return (
             <React.Fragment>
-                <Avatar alt="Bridge Keeper" src={pic} className={classes.bigAvatar}/>
                 <h1>Success!</h1>
-                <p>Well done {state.firstName} {state.lastName}, {state.occupation} of {state.city}. You may pass.</p>
+                <Avatar
+                    alt="Sir Lancelot"
+                    src={lancelot}
+                    className={classes.bigAvatar}
+                />
+                <p>Well done {state.firstName} {state.lastName}, {state.occupation} of {state.city}. You answered all my questions. Off you go.</p>
                 <Button
                     variant="contained"
                     color="primary"

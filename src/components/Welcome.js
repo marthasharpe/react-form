@@ -16,7 +16,12 @@ export default function Welcome(props) {
 
     return (
         <React.Fragment>
-            <Avatar alt="Bridge Keeper" src={pic} className={classes.bigAvatar}/>
+            <h1>Stop!</h1>
+            <Avatar
+                alt="Bridge Keeper"
+                src={pic}
+                className={classes.bigAvatar}
+            />
             <p>Who would cross the Bridge of Death must answer me these questions three, ere the other side he see.</p>
             <Button
                 variant="contained"
