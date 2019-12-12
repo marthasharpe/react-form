@@ -21,7 +21,7 @@ export default function Welcome(props) {
                 src={pic}
                 className={classes.bigAvatar}
             />
-            <p>Who would cross the Bridge of Death must answer me<br/>these questions three, ere the other side he see.</p>
+            <p>Who would cross the Bridge of Death must answer me these questions three, ere the other side he see.</p>
             <Button
                 variant="contained"
                 color="primary"

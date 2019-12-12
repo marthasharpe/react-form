@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, AppBar, Paper } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import State from './State';
+import Signature from './Signature/Signature';
 
 const theme = createMuiTheme({
     palette: {
@@ -35,6 +36,7 @@ export default function App() {
                 </Box>
                 </Paper>
             </Container>
+            <Signature />
         </ThemeProvider>
     )
 }
