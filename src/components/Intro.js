@@ -68,11 +68,15 @@ export default function Intro() {
             )
         case 5:
             return (
-                <Processing />
+                <Processing
+                    nextStep={nextStep}
+                />
             )
         case 6:
             return (
-                <Success />
+                <Success
+                    values={values}
+                />
             )
         default:
             return (
