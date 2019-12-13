@@ -13,7 +13,6 @@ export default function State() {
         lastName: '',
         occupation: '',
         city: '',
-        season: '',
         color: '',
     }
     const [values, setValues] = useState(initialState);

@@ -13,11 +13,9 @@ export default function UserFavorites(props) {
                     onChange={props.handleChange('color')}
                 >
                     <FormControlLabel value="red" control={<Radio color="default"/>} label="Red" />
-                    <FormControlLabel value="orange" control={<Radio color="default"/>} label="Orange" />
                     <FormControlLabel value="yellow" control={<Radio color="default" />} label="Yellow" />
                     <FormControlLabel value="green" control={<Radio color="default" />} label="Green" />
                     <FormControlLabel value="blue" control={<Radio color="default" />} label="Blue" />
-                    <FormControlLabel value="purple" control={<Radio color="default"/>} label="Purple" />
                 </RadioGroup>
             </FormControl>
             <Grid container justify="center" spacing={2}>
