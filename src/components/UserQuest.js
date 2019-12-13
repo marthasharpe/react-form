@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button, TextField, Grid } from '@material-ui/core';
+import { Button, TextField, Grid, Typography } from '@material-ui/core';
 
 export default function UserQuest(props) {
     return (
         <React.Fragment>
-            <h2 className="heading">What is your...</h2>
+            <Typography variant="h4">What is your...</Typography>
             <TextField
                 id="filled-basic"
                 label="Occupation"

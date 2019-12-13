@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Avatar } from '@material-ui/core';
+import { Button, Avatar, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import gorge from './../into-the-gorge.png';
 import lancelot from './../lancelot.png';
@@ -21,13 +21,13 @@ export default function Success(props) {
     if (Object.values(state).includes('')) {
         return (
             <React.Fragment>
-                <h1>Failure!</h1>
+                <Typography variant="h4">Failure!</Typography>
                 <Avatar
                     alt="Into the Gorge"
                     src={gorge}
                     className={classes.bigAvatar}
                 />
-                <p>You did not answer all of my questions!<br/>You are cast into the Gorge of Eternal Peril!</p>
+                <Typography variant="body1">You did not answer all of my questions!<br/>You are cast into the Gorge of Eternal Peril!</Typography>
                 <Button
                     variant="contained"
                     color="primary"
@@ -40,13 +40,13 @@ export default function Success(props) {
     } else {
         return (
             <React.Fragment>
-                <h1>Success!</h1>
+                <Typography variant="h4">Success!</Typography>
                 <Avatar
                     alt="Sir Lancelot"
                     src={lancelot}
                     className={classes.bigAvatar}
                 />
-                <p>Well done {state.firstName} {state.lastName}, {state.occupation} of {state.city}!<br/>You answered all my questions. Off you go.</p>
+                <Typography variant="body1">Well done {state.firstName} {state.lastName}, {state.occupation} of {state.city}!<br/>You answered all my questions. Off you go.</Typography>
                 <Button
                     variant="contained"
                     color="primary"

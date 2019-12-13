@@ -1,10 +1,10 @@
 import React from 'react';
-import { Grid, Button, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel } from '@material-ui/core';
+import { Grid, Button, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel, Typography } from '@material-ui/core';
 
 export default function UserFavorites(props) {
     return (
         <React.Fragment>
-            <h2 className="heading">What is your...</h2>
+            <Typography variant="h4">What is your...</Typography>
             <FormControl component="fieldset">
                 <FormLabel component="legend">Favorite Color</FormLabel>
                 <RadioGroup
@@ -13,9 +13,11 @@ export default function UserFavorites(props) {
                     onChange={props.handleChange('color')}
                 >
                     <FormControlLabel value="red" control={<Radio color="default"/>} label="Red" />
+                    <FormControlLabel value="orange" control={<Radio color="default"/>} label="Orange" />
                     <FormControlLabel value="yellow" control={<Radio color="default" />} label="Yellow" />
                     <FormControlLabel value="green" control={<Radio color="default" />} label="Green" />
                     <FormControlLabel value="blue" control={<Radio color="default" />} label="Blue" />
+                    <FormControlLabel value="purple" control={<Radio color="default"/>} label="Purple" />
                 </RadioGroup>
             </FormControl>
             <Grid container justify="center" spacing={2}>

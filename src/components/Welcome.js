@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Avatar } from '@material-ui/core';
+import { Button, Avatar, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import pic from './../bridge-keeper.png';
 
@@ -15,13 +15,13 @@ export default function Welcome(props) {
 
     return (
         <React.Fragment>
-            <h1 className="heading">Stop!</h1>
+            <Typography variant="h4">Stop!</Typography>
             <Avatar
                 alt="Bridge Keeper"
                 src={pic}
                 className={classes.bigAvatar}
             />
-            <p>Who would cross the Bridge of Death must answer me these questions three, ere the other side he see.</p>
+            <Typography variant="body1">Who would cross the Bridge of Death must answer me these questions three, ere the other side he see.</Typography>
             <Button
                 variant="contained"
                 color="primary"
